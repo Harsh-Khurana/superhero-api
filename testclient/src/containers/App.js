@@ -37,6 +37,7 @@ class App extends React.Component{
     .then(console.log);
   }
 
+  // Fn to select a single hero on click of edit hero button
   selectHero = id =>{
     const heroToBeEdited = this.state.allHeros.filter(hero=>hero.id==id);
     this.setState({selectHero:{...heroToBeEdited[0]}});
@@ -46,6 +47,7 @@ class App extends React.Component{
   render(){
     return(
       <React.Fragment>
+      {/* ROUTING IS HANDLED B/W POST - MAIN - PUT ROUTE TO SHOW DIFFERENT VIEWS */}
       { this.state.route==='post'?<CreateHero routeHandler={this.routeHandler}/>
         :(this.state.route==='put'?<EditHero routeHandler={this.routeHandler} heroData={this.state.selectHero}/>
           :<div className="App">

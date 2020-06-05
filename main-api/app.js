@@ -3,6 +3,7 @@ const express = require('express'),
 	mongoose = require('mongoose'),
 	SuperHero = require('./Modal/Modal');
 
+// middlewares to manipulate the req,res before actual use
 app.use(require('cors')());
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
@@ -13,6 +14,7 @@ const {
 	databaseURL = 'mongodb://localhost:27017/superheros'
 } = process.env;
 
+// currently using local database but mongoDB Atlas can be used if required
 mongoose.connect(databaseURL,{useNewUrlParser:true,useUnifiedTopology:true,useFindAndModify:false});
 // URL for the deployed website or dev URL
 const productionURL = 'http://localhost:3000/';

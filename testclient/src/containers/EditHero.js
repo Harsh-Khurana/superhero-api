@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 
+// This comp handles the editing of heros 
+// Note- making req will not update the hero input feilds but will update cards when allherodisplay is requested again
 export default class CreateHero extends React.Component{
 	state={
 		id:'',
@@ -10,6 +12,7 @@ export default class CreateHero extends React.Component{
 		superpower:''
 	}
 
+	// To fill in the orignal fields of hero data
 	componentDidMount(){
 		this.setState({...this.props.heroData});
 	}

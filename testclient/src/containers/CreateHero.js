@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
+// This is used to create a new hero
 export default class CreateHero extends React.Component{
 	state={
 		name:'',
@@ -9,7 +10,9 @@ export default class CreateHero extends React.Component{
 		superpower:''
 	}
 
+	// This handles the submit request 
 	submitHeroHandler=()=>{
+		// If the feilds are not empty then only request is made
 		if(this.state.name.length>0&&this.state.color.length>0&&this.state.quality.length>0&&this.state.superpower.length>0){
 			axios.post('http://localhost:3000/superheros',this.state)
 			.then(console.log);

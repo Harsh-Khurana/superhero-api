@@ -1,5 +1,6 @@
 import React from 'react';
 
+// This component displays all heros in cards
 const Assemble = props =>{
 	const heroDisplay = props.heros.map(hero=>{
 		return (
