@@ -1,0 +1,122 @@
+color-blue,red
+quality-brave,generous
+superpower-flying,super strength,super speed
+
+const heros = [
+	{
+		id:1,	
+		name:'Captain America',
+		color:'blue',
+		quality:'Brave',
+		superpower:'superStrength',
+	},
+
+	{
+		id:2,
+		name:'Spider Man',
+		color:'blue',
+		quality:'Brave',
+		superpower:'flying',
+	},
+
+	{
+		id:3,
+		name:'Hawk Eye',
+		color:'blue',
+		quality:'Brave',
+		superpower:'superSpeed',
+	},
+
+	{
+		id:4,
+		name:'Scarlett Witch',
+		color:'blue',
+		quality:'generous',
+		superpower:'superStrength',
+	},
+
+	{	
+		id:5,
+		name:'Vision',
+		color:'blue',
+		quality:'generous',
+		superpower:'flying',
+	},
+
+	{
+		id:6,
+		name:'Black Widow',
+		color:'blue',
+		quality:'generous',
+		superpower:'superSpeed',
+	},
+
+	{
+		id:7,
+		name:'Hulk',
+		color:'red',
+		quality:'Brave',
+		superpower:'superStrength',
+	},
+
+	{
+		id:8,
+		name:'Iron Man',
+		color:'red',
+		quality:'Brave',
+		superpower:'flying',
+	},
+
+	{
+		id:9,
+		name:'Captain Marvel',
+		color:'red',
+		quality:'Brave',
+		superpower:'superSpeed',
+	},
+
+	{
+		id:10,
+		name:'Black Panther',
+		color:'red',
+		quality:'generous',
+		superpower:'superStrength',
+	},
+
+	{
+		id:11,
+		name:'Thor',
+		color:'red',
+		quality:'generous',
+		superpower:'flying',
+	},
+
+	{
+		id:12,
+		name:'Star Lord',
+		color:'red',
+		quality:'generous',
+		superpower:'superSpeed',
+	},
+
+	{
+		id:13,
+		name:'Ant Man',
+		color:'red',
+		quality:'Brave',
+		superpower:'superStrength',
+	}
+];
+
+
+heros.map(hero=>{
+	SuperHero.create({
+		name:hero.name,
+		color:hero.color,
+		quality:hero.quality,
+		superpower:hero.superpower
+	},(err,myHero)=>{
+		if(err) console.log("oh my there's an error : ",err);
+		else console.log(myHero);
+	})
+})

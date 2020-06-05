@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Superhero API</title>
+	<style type="text/css">
+		*{
+			margin:1rem;
+		}
+		#container{
+			text-align: center;
+			margin: 4rem;
+			padding:4rem;
+		}
+		h1{
+			font-size: 4rem;
+			text-align: center;
+			margin-bottom: 2rem;
+		}
+		ul{
+			list-style: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<h1>Welcome to Superhero API</h1>
+		<p>Access your superhero data in multiple ways : </p>
+		<ul>
+			<li>Access all superheros : <a href="<%= url %>superheros">/superheros</a></li>
+			<li>Access single superhero : <a href="<%= url %>superheros/5ed923f0cbe5211c346f8351">/superheros/:id</a></li>
+			<li>Post or Create your superhero : <a href="<%= url %>superheros">/superheros</a>(but must be a post request)</li>
+			<li>Update a superhero : <a href="<%= url %>superheros/5ed923f0cbe5211c346f8351">/superheros/:id</a>(but must be a put request)</li>
+			<li>Delete a superhero : <a href="<%= url %>superheros/5ed923f0cbe5211c346f8351">/superheros/:id</a>(but must be a delete request)</li>
+		</ul>
+	</div>
+</body>
+</html>
